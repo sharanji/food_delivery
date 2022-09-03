@@ -17,15 +17,15 @@ class _BodyState extends State<Body> {
   List<Map<String, String>> splashData = [
     {
       "text": "Ride Responsibly in Safer and Greener Cabs",
-      "image": "assets/images/location_taxi.png"
+      "image": "assets/images/splash_1.png"
     },
     {
       "text": "We help people conect with store \naround Tamilnadu",
-      "image": "assets/images/mysplash2.png"
+      "image": "assets/images/splash_1.png"
     },
     {
       "text": "We show the easy way to shop. \nJust stay at home with us",
-      "image": "assets/images/mysplash3.png"
+      "image": "assets/images/splash_1.png"
     },
   ];
   @override
@@ -65,14 +65,14 @@ class _BodyState extends State<Body> {
                         (index) => buildDot(index: index),
                       ),
                     ),
-                    Spacer(flex: 2),
+                    const Spacer(flex: 2),
                     DefaultButton(
                       text: "Continue",
                       press: () {
-                        Navigator.pushNamed(context, SignInScreen.routeName);
+                        Navigator.of(context).pushNamed(SignInScreen.routeName);
                       },
                     ),
-                    Spacer(),
+                    const Spacer(),
                   ],
                 ),
               ),

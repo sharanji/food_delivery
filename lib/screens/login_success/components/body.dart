@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/components/default_button.dart';
 import 'package:food_delivery/constants.dart';
-import 'package:food_delivery/home_screen.dart';
+import 'package:food_delivery/screens/dashboard/app_home_screen.dart';
 import 'package:food_delivery/size_config.dart';
 import 'package:food_delivery/theme.dart';
 
@@ -25,7 +25,7 @@ class Body extends StatelessWidget {
         ),
         SizedBox(height: SizeConfig.screenHeight * 0.04),
         Image.asset(
-          "assets/images/Background_success.png",
+          "assets/images/success.png",
           // height: SizeConfig.screenHeight * 0.4, //40%
           fit: BoxFit.cover,
         ),

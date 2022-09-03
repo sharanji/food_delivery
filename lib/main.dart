@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import './home_screen.dart';
+import 'package:food_delivery/routes.dart';
+import 'package:food_delivery/screens/dashboard/app_home_screen.dart';
+import 'package:food_delivery/screens/splash_shop/splash_screen.dart';
+import 'package:food_delivery/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,10 +16,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Food delivery',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: HomeScreen(),
+      theme: theme(),
+      themeMode: ThemeMode.light,
+      routes: routes,
+      // home: const SplashScreen(),
+      initialRoute: '/home',
     );
   }
 }

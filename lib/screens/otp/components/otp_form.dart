@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/components/default_button.dart';
-import 'package:food_delivery/home_screen.dart';
+import 'package:food_delivery/screens/dashboard/app_home_screen.dart';
 import 'package:food_delivery/size_config.dart';
 
 import '../../../constants.dart';
