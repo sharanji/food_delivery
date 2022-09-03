@@ -5,19 +5,19 @@ import 'package:food_delivery/screens/training/training_screen.dart';
 import 'package:flutter/material.dart';
 import 'app_theme.dart';
 
-class FitnessAppHomeScreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
+  static const routeName = '/home';
   @override
-  _FitnessAppHomeScreenState createState() => _FitnessAppHomeScreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
-    with TickerProviderStateMixin {
+class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   AnimationController? animationController;
 
   List<TabIconData> tabIconsList = TabIconData.tabIconsList;
 
   Widget tabBody = Container(
-    color: FitnessAppTheme.background,
+    color: AppTheme.background,
   );
 
   @override
@@ -42,7 +42,7 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: FitnessAppTheme.background,
+      color: AppTheme.background,
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: FutureBuilder<bool>(
