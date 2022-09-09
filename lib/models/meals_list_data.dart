@@ -5,7 +5,7 @@ class MealsListData {
     this.startColor = '',
     this.endColor = '',
     this.meals,
-    this.kacl = 0,
+    this.distance = 0,
   });
 
   String imagePath;
@@ -13,29 +13,29 @@ class MealsListData {
   String startColor;
   String endColor;
   List<String>? meals;
-  int kacl;
+  double distance;
 
   static List<MealsListData> tabIconsList = <MealsListData>[
     MealsListData(
       imagePath: 'assets/images/breakfast.png',
-      titleTxt: 'Breakfast',
-      kacl: 525,
+      titleTxt: 'Sharanji',
+      distance: 15,
       meals: <String>['Bread,', 'Peanut butter,', 'Apple'],
       startColor: '#FA7D82',
       endColor: '#FFB295',
     ),
     MealsListData(
       imagePath: 'assets/images/lunch.png',
-      titleTxt: 'Lunch',
-      kacl: 602,
+      titleTxt: 'Santhosh',
+      distance: 60,
       meals: <String>['Salmon,', 'Mixed veggies,', 'Avocado'],
       startColor: '#738AE6',
       endColor: '#5C5EDD',
     ),
     MealsListData(
       imagePath: 'assets/images/snack.png',
-      titleTxt: 'Snack',
-      kacl: 0,
+      titleTxt: 'Lokesh',
+      distance: 12.3,
       meals: <String>['Recommend:', '800 kcal'],
       startColor: '#FE95B6',
       endColor: '#FF5287',
@@ -43,7 +43,7 @@ class MealsListData {
     MealsListData(
       imagePath: 'assets/images/dinner.png',
       titleTxt: 'Dinner',
-      kacl: 0,
+      distance: 0,
       meals: <String>['Recommend:', '703 kcal'],
       startColor: '#6F72CA',
       endColor: '#1E1466',

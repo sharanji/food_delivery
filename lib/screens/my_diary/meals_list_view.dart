@@ -1,4 +1,4 @@
-import '../../app_theme.dart';
+import '../../theme.dart';
 import 'package:food_delivery/models/meals_list_data.dart';
 import '../../main.dart';
 import 'package:flutter/material.dart';
@@ -160,7 +160,7 @@ class MealsView extends StatelessWidget {
                                   children: <Widget>[
                                     Text(
                                       mealsListData!.meals!.join('\n'),
-                                      style: TextStyle(
+                                      style: const TextStyle(
                                         fontFamily: AppTheme.fontName,
                                         fontWeight: FontWeight.w500,
                                         fontSize: 10,
@@ -172,27 +172,29 @@ class MealsView extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            mealsListData?.kacl != 0
+                            mealsListData?.distance != 0
                                 ? Row(
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     children: <Widget>[
-                                      Text(
-                                        mealsListData!.kacl.toString(),
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontFamily: AppTheme.fontName,
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 24,
-                                          letterSpacing: 0.2,
-                                          color: AppTheme.white,
+                                      Flexible(
+                                        child: Text(
+                                          mealsListData!.distance.toString(),
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontFamily: AppTheme.fontName,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 24,
+                                            letterSpacing: 0.2,
+                                            color: AppTheme.white,
+                                          ),
                                         ),
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
                                             left: 4, bottom: 3),
                                         child: Text(
-                                          'kcal',
+                                          'Kms',
                                           style: TextStyle(
                                             fontFamily: AppTheme.fontName,
                                             fontWeight: FontWeight.w500,

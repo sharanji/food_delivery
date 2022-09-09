@@ -1,5 +1,5 @@
 import 'package:food_delivery/screens/ui_view/wave_view.dart';
-import 'package:food_delivery/app_theme.dart';
+import 'package:food_delivery/theme.dart';
 import '../../main.dart';
 import 'package:flutter/material.dart';
 

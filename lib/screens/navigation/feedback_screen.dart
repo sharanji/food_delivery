@@ -1,4 +1,4 @@
-import 'package:food_delivery/app_theme.dart';
+import 'package:food_delivery/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/components/default_button.dart';
 import 'package:food_delivery/size_config.dart';
