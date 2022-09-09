@@ -65,7 +65,7 @@ class MyTheme {
     primaryColor: kPrimaryColor,
     brightness: Brightness.dark,
     appBarTheme: appBarTheme(),
-    textTheme: textTheme(),
+    // textTheme: darktextTheme(),
     inputDecorationTheme: inputDecorationTheme(),
     visualDensity: VisualDensity.adaptivePlatformDensity,
   );

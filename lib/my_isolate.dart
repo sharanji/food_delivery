@@ -68,13 +68,19 @@ void onStart(ServiceInstance service) async {
   });
 
   IOWebSocketChannel channel = IOWebSocketChannel.connect(
-    Uri.parse('ws://192.168.1.3:8000/ws/socket-server/'),
+    Uri.parse('ws://192.168.2.38:8000/ws/socket-server/'),
   );
 
   channel.stream.listen((value) {
     var decodedVal = json.decode(value);
 
     if (decodedVal['message'] == 'order') {
+      print('Value from controller: $value');
+      service.invoke(
+        'update',
+        decodedVal,
+      );
+    } else if (decodedVal['message'] == 'cancel') {
       print('Value from controller: $value');
       service.invoke(
         'update',

@@ -65,12 +65,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
 
   @override
   Widget build(BuildContext context) {
-    var brightness = MediaQuery.of(context).platformBrightness;
-    bool isLightMode = false; //brightness == Brightness.light;
-    print('my ' + isLightMode.toString());
     return Scaffold(
-      // backgroundColor: AppTheme.notWhite.withOpacity(0.9),
-      backgroundColor: AppTheme.nearlyWhite,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -165,7 +160,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                     fontFamily: AppTheme.fontName,
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
-                    color: AppTheme.darkText,
+                    // color: AppTheme.darkText,
                   ),
                   textAlign: TextAlign.left,
                 ),
@@ -228,15 +223,17 @@ class _HomeDrawerState extends State<HomeDrawer> {
                       ? Container(
                           width: 24,
                           height: 24,
-                          child: Image.asset(listData.imageName,
-                              color: widget.screenIndex == listData.index
-                                  ? kPrimaryColor
-                                  : AppTheme.nearlyBlack),
+                          child: Image.asset(
+                            listData.imageName,
+                            color: widget.screenIndex == listData.index
+                                ? kPrimaryColor
+                                : Theme.of(context).textTheme.bodyLarge!.color,
+                          ),
                         )
                       : Icon(listData.icon?.icon,
                           color: widget.screenIndex == listData.index
                               ? kPrimaryColor
-                              : AppTheme.nearlyBlack),
+                              : Theme.of(context).textTheme.bodyLarge!.color),
                   const Padding(
                     padding: EdgeInsets.all(4.0),
                   ),
@@ -247,7 +244,7 @@ class _HomeDrawerState extends State<HomeDrawer> {
                       fontSize: 16,
                       color: widget.screenIndex == listData.index
                           ? Colors.black
-                          : AppTheme.nearlyBlack,
+                          : Theme.of(context).textTheme.bodyLarge!.color,
                     ),
                     textAlign: TextAlign.left,
                   ),

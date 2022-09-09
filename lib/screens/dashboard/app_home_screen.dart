@@ -14,7 +14,7 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppTheme.background,
+      color: Theme.of(context).scaffoldBackgroundColor,
       child: Scaffold(
         backgroundColor: Colors.transparent,
         body: FutureBuilder<bool>(
@@ -24,8 +24,13 @@ class HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
               return const SizedBox();
             } else {
               return Stack(
-                children: const <Widget>[
-                  MyDiaryScreen(),
+                children: <Widget>[
+                  RefreshIndicator(
+                    onRefresh: () async {
+                      return Future<void>.delayed(const Duration(seconds: 3));
+                    },
+                    child: const MyDiaryScreen(),
+                  ),
                 ],
               );
             }

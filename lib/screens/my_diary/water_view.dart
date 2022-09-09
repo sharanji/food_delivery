@@ -119,7 +119,7 @@ class _WaterViewState extends State<WaterView> with TickerProviderStateMixin {
                               child: Container(
                                 height: 2,
                                 decoration: BoxDecoration(
-                                  color: AppTheme.background,
+                                  // color: AppTheme.background,
                                   borderRadius: const BorderRadius.all(
                                       Radius.circular(4.0)),
                                 ),

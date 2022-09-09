@@ -28,7 +28,7 @@ class RecentOrders extends StatelessWidget {
       padding: const EdgeInsets.only(left: 24, right: 24, top: 2, bottom: 18),
       child: Container(
         decoration: BoxDecoration(
-          color: AppTheme.white,
+          color: Theme.of(context).canvasColor,
           borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(8.0),
               bottomLeft: Radius.circular(8.0),
@@ -36,7 +36,7 @@ class RecentOrders extends StatelessWidget {
               topRight: Radius.circular(68.0)),
           boxShadow: <BoxShadow>[
             BoxShadow(
-                color: AppTheme.grey.withOpacity(0.2),
+                color: Theme.of(context).canvasColor.withOpacity(0.2),
                 offset: Offset(1.1, 1.1),
                 blurRadius: 10.0),
           ],
@@ -55,11 +55,12 @@ class RecentOrders extends StatelessWidget {
                       'Order Id : 986568',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                          fontFamily: AppTheme.fontName,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 16,
-                          letterSpacing: -0.1,
-                          color: AppTheme.darkText),
+                        fontFamily: AppTheme.fontName,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 16,
+                        letterSpacing: -0.1,
+                        // color: AppTheme.darkText,
+                      ),
                     ),
                   ),
                   Row(
@@ -108,7 +109,7 @@ class RecentOrders extends StatelessWidget {
                             children: <Widget>[
                               Icon(
                                 Icons.access_time,
-                                color: AppTheme.grey.withOpacity(0.5),
+                                // color: AppTheme.grey.withOpacity(0.5),
                                 size: 16,
                               ),
                               Padding(
@@ -121,7 +122,7 @@ class RecentOrders extends StatelessWidget {
                                     fontWeight: FontWeight.w500,
                                     fontSize: 14,
                                     letterSpacing: 0.0,
-                                    color: AppTheme.grey.withOpacity(0.5),
+                                    // color: AppTheme.grey.withOpacity(0.5),
                                   ),
                                 ),
                               ),
@@ -154,7 +155,7 @@ class RecentOrders extends StatelessWidget {
               child: Container(
                 height: 2,
                 decoration: BoxDecoration(
-                  color: AppTheme.background,
+                  // color: AppTheme.background,
                   borderRadius: BorderRadius.all(Radius.circular(4.0)),
                 ),
               ),
