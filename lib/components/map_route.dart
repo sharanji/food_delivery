@@ -66,6 +66,7 @@ class _MapRouteState extends State<MapRoute> {
   Future<void> getPolyPoints() async {
     await fetchLocation();
 
+    if (polylineCoordinates.isNotEmpty) return;
     PolylinePoints polylinePoints = PolylinePoints();
     PolylineResult result = await polylinePoints.getRouteBetweenCoordinates(
       ApiKeys.googleMapkey, // Your Google Map Key

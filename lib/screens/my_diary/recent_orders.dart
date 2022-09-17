@@ -1,3 +1,5 @@
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+
 import '../../theme.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/theme.dart';
@@ -11,7 +13,7 @@ class RecentOrders extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         orders(context),
@@ -52,7 +54,7 @@ class RecentOrders extends StatelessWidget {
                   const Padding(
                     padding: EdgeInsets.only(left: 4, bottom: 8, top: 16),
                     child: Text(
-                      'Order Id : 986568',
+                      'Order Id : Al - 986568',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontFamily: AppTheme.fontName,
@@ -70,7 +72,7 @@ class RecentOrders extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.end,
-                        children: <Widget>[
+                        children: const <Widget>[
                           Padding(
                             padding: const EdgeInsets.only(left: 4, bottom: 3),
                             child: Text(
@@ -106,7 +108,7 @@ class RecentOrders extends StatelessWidget {
                         children: <Widget>[
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
+                            children: const <Widget>[
                               Icon(
                                 Icons.access_time,
                                 // color: AppTheme.grey.withOpacity(0.5),
@@ -171,7 +173,7 @@ class RecentOrders extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          '185 cm',
+                          '4.8 Kms',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontFamily: AppTheme.fontName,
@@ -184,7 +186,7 @@ class RecentOrders extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(top: 6),
                           child: Text(
-                            'Height',
+                            'PickUp',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontFamily: AppTheme.fontName,
@@ -207,7 +209,7 @@ class RecentOrders extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: <Widget>[
                             Text(
-                              '27.3 BMI',
+                              '2.52 Kms',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontFamily: AppTheme.fontName,
@@ -220,7 +222,7 @@ class RecentOrders extends StatelessWidget {
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
                               child: Text(
-                                'Overweight',
+                                'Drop',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: AppTheme.fontName,
@@ -244,20 +246,20 @@ class RecentOrders extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: <Widget>[
-                            Text(
-                              '20%',
-                              style: TextStyle(
-                                fontFamily: AppTheme.fontName,
-                                fontWeight: FontWeight.w500,
-                                fontSize: 16,
-                                letterSpacing: -0.2,
-                                color: AppTheme.darkText,
+                            RatingBarIndicator(
+                              rating: 3.5,
+                              itemCount: 5,
+                              itemSize: 15.0,
+                              // physics: BouncingScrollPhysics(),
+                              itemBuilder: (context, _) => const Icon(
+                                Icons.star,
+                                color: Colors.amber,
                               ),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 6),
                               child: Text(
-                                'Body fat',
+                                'Rating',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   fontFamily: AppTheme.fontName,

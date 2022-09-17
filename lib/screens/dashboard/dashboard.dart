@@ -21,6 +21,7 @@ class NavigationHomeScreenState extends State<NavigationHomeScreen> {
   DrawerIndex? drawerIndex;
 
   int pageIndex = 0;
+
   String text = 'stop';
   void denyHandler() {
     setState(() {

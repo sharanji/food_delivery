@@ -1,13 +1,10 @@
 import 'package:food_delivery/screens/my_diary/recent_orders.dart';
-import 'package:food_delivery/screens/ui_view/body_measurement.dart';
 import 'package:food_delivery/screens/ui_view/glass_view.dart';
 import 'package:food_delivery/screens/ui_view/mediterranean_diet_view.dart';
 import 'package:food_delivery/screens/ui_view/title_view.dart';
 import 'package:food_delivery/theme.dart';
-import 'package:food_delivery/screens/my_diary/meals_list_view.dart';
-import 'package:food_delivery/screens/my_diary/water_view.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery/screens/ui_view/wave_view.dart';
+import 'package:intl/intl.dart';
 
 class MyDiaryScreen extends StatefulWidget {
   const MyDiaryScreen({Key? key}) : super(key: key);
@@ -181,7 +178,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
                         borderRadius:
                             const BorderRadius.all(Radius.circular(32.0)),
                         onTap: () {},
-                        child: Center(
+                        child: const Center(
                           child: Icon(
                             Icons.keyboard_arrow_left,
                             // color: AppTheme.grey,
@@ -196,7 +193,7 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
                       ),
                       child: Row(
                         children: <Widget>[
-                          Padding(
+                          const Padding(
                             padding: const EdgeInsets.only(right: 8),
                             child: Icon(
                               Icons.calendar_today,
@@ -205,14 +202,15 @@ class _MyDiaryScreenState extends State<MyDiaryScreen>
                             ),
                           ),
                           Text(
-                            '15 May',
+                            DateFormat.yMMMd()
+                                .format(DateTime.now())
+                                .toString(),
                             textAlign: TextAlign.left,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontFamily: AppTheme.fontName,
                               fontWeight: FontWeight.normal,
                               fontSize: 18,
                               letterSpacing: -0.2,
-                              // color: AppTheme.darkerText,
                             ),
                           ),
                         ],
