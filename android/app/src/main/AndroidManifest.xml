@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.food_delivery">
    <application
-        android:label="food_delivery/screens"
+        android:label="foodDelivery"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
@@ -30,5 +30,7 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyAbs0hgqNa7G6Chjooy0iC_YST4kq0bCwc"/>
     </application>
 </manifest>

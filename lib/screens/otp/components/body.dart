@@ -28,7 +28,7 @@ class Body extends StatelessWidget {
                 onTap: () {
                   // OTP code resend
                 },
-                child: Text(
+                child: const Text(
                   "Resend OTP Code",
                   style: TextStyle(decoration: TextDecoration.underline),
                 ),
@@ -44,7 +44,7 @@ class Body extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("This code will expired in "),
+        const Text("This code will expired in "),
         TweenAnimationBuilder(
           tween: Tween(begin: 30.0, end: 0.0),
           duration: Duration(seconds: 30),

@@ -58,7 +58,7 @@ final headingStyle = TextStyle(
 class MyTheme {
   static final darkTheme = ThemeData(
     scaffoldBackgroundColor: Colors.grey.shade900,
-    fontFamily: 'Prompt',
+    fontFamily: 'WorkSans',
     canvasColor: const Color.fromARGB(255, 28, 27, 27),
     colorScheme: const ColorScheme.dark(primary: PRIMARYCOLOR),
     iconTheme: const IconThemeData(color: Colors.white),
@@ -71,7 +71,7 @@ class MyTheme {
   );
   static final lightTheme = ThemeData(
     scaffoldBackgroundColor: const Color.fromARGB(255, 244, 244, 244),
-    fontFamily: 'Prompt',
+    fontFamily: 'WorkSans',
     colorScheme: const ColorScheme.light(primary: PRIMARYCOLOR),
     canvasColor: const Color.fromARGB(255, 255, 255, 255),
     iconTheme: const IconThemeData(color: SECONDARYCOLOR),
@@ -102,7 +102,7 @@ class AppTheme {
   static const Color deactivatedText = Color(0xFF767676);
   static const Color dismissibleBackground = Color(0xFF364A54);
   static const Color spacer = Color(0xFFF2F2F2);
-  static const String fontName = 'Roboto';
+  static const String fontName = 'WorkSans';
 
   static const TextTheme textTheme = TextTheme(
     headline4: display1,

@@ -34,7 +34,7 @@ class NavigationHomeScreenState extends State<NavigationHomeScreen> {
 
     List pages = [
       const DashboardScreen(),
-      NewOrderScreen(denyHandler: denyHandler),
+      NewOrderScreen(),
     ];
     if (streamProvider!['message'] == 'order') {
       setState(() {

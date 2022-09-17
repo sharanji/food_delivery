@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             title: 'Food delivery',
-            themeMode: themeProvider.themeMode,
+            themeMode: ThemeMode.system,
             theme: MyTheme.lightTheme,
             darkTheme: MyTheme.darkTheme,
             routes: routes,

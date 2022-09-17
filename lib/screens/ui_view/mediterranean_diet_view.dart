@@ -33,7 +33,10 @@ class MediterranesnDietView extends StatelessWidget {
         child: Column(
           children: <Widget>[
             Padding(
-              padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
+              padding: const EdgeInsets.only(
+                top: 16,
+                left: 10,
+              ),
               child: Row(
                 children: <Widget>[
                   Expanded(
@@ -60,7 +63,9 @@ class MediterranesnDietView extends StatelessWidget {
                                   children: <Widget>[
                                     Padding(
                                       padding: const EdgeInsets.only(
-                                          left: 4, bottom: 2),
+                                        left: 4,
+                                        bottom: 2,
+                                      ),
                                       child: Text(
                                         'Orders',
                                         textAlign: TextAlign.center,
@@ -85,13 +90,13 @@ class MediterranesnDietView extends StatelessWidget {
                                           child: Image.asset(
                                               "assets/images/eaten.png"),
                                         ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
+                                        const Padding(
+                                          padding: EdgeInsets.only(
                                               left: 4, bottom: 3),
                                           child: Text(
                                             '05',
                                             textAlign: TextAlign.center,
-                                            style: const TextStyle(
+                                            style: TextStyle(
                                               fontFamily: AppTheme.fontName,
                                               fontWeight: FontWeight.w600,
                                               fontSize: 16,
@@ -101,7 +106,9 @@ class MediterranesnDietView extends StatelessWidget {
                                         ),
                                         Padding(
                                           padding: const EdgeInsets.only(
-                                              left: 4, bottom: 3),
+                                            left: 4,
+                                            bottom: 3,
+                                          ),
                                           child: Text(
                                             'Completed',
                                             textAlign: TextAlign.center,
