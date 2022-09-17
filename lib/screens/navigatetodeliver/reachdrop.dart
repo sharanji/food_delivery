@@ -49,7 +49,7 @@ class _ReachDropScreenState extends State<ReachDropScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Reach Pickup',
+                        'Reach Drop',
                         style: Theme.of(context).textTheme.headlineSmall,
                       ),
                     ],

@@ -422,9 +422,7 @@ class _DropOrderScreenState extends State<DropOrderScreen> {
                       );
                       ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     }
-                    setState(() {
-                      isFinished = false;
-                    });
+                    Navigator.of(context).pushReplacementNamed('/home');
                   });
                 },
                 onFinish: () async {
